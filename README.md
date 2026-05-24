@@ -3,8 +3,11 @@
 Ce projet implémente un système complet de géolocalisation mobile connecté à un serveur distant. Il se compose d’un backend en PHP avec base de données MySQL et d’une application Android développée en Java utilisant la bibliothèque Volley pour l'envoi HTTP.
 
 ---
+## Demonstration
 
-## 🛠️ Partie 1 : Configuration du Serveur (PHP & MySQL)
+https://youtube.com/shorts/E_dCOADjIR0?feature=share
+
+##  Partie 1 : Configuration du Serveur (PHP & MySQL)
 
 Le serveur reçoit les requêtes HTTP POST envoyées par le smartphone, crée un objet métier `Position`, et l'enregistre en base de données.
 
@@ -59,7 +62,7 @@ Le serveur doit répondre : **`Position enregistree avec succes`**.
 
 ---
 
-## 📱 Partie 2 : Configuration de l'Application Android
+##  Partie 2 : Configuration de l'Application Android
 
 L'application Android écoute en continu le capteur GPS du smartphone et transmet les coordonnées au serveur dès qu'elle détecte un déplacement significatif.
 
@@ -89,7 +92,7 @@ Pour pallier ce problème, le code intègre un mécanisme de repli automatique s
 
 ---
 
-## 🚀 Procédure de Test de l'application
+## Procédure de Test de l'application
 
 1. **Lancez le serveur local** (ex: Apache et MySQL sur XAMPP).
 2. **Ouvrez le projet sous Android Studio**.
@@ -104,7 +107,7 @@ Pour pallier ce problème, le code intègre un mécanisme de repli automatique s
 
 ---
 
-## 💡 Bonnes Pratiques Rappelées
+## Bonnes Pratiques Rappelées
 * Assurez-vous que le GPS de l'appareil mobile est activé dans les réglages système.
 * Si le serveur distant ne répond pas, désactivez temporairement le pare-feu de votre ordinateur (ou configurez une règle d'accès pour le port 80).
 * Utilisez toujours des requêtes préparées côté PHP pour sécuriser les insertions contre les injections SQL (ce qui est fait dans `PositionService`).
